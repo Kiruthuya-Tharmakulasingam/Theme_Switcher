@@ -1,4 +1,10 @@
-const theme = document.getElementById("themeSelect");
-const body = document.body;
+const themeSelect = document.getElementById("themeSelect");
 
-select .body()
+themeSelect.addEventListener("change", function () {
+  // Remove all theme classes
+  document.body.className = "";
+
+  // Add the selected theme
+  const selectedTheme = themeSelect.value;
+  document.body.classList.add("theme-" + selectedTheme);
+});
